@@ -25,23 +25,25 @@ export const Header = () => {
             dualanguage
           </h1>
         </div>
-        <ClerkLoading>
-          <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
-        </ClerkLoading>
-        <ClerkLoaded>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton
-              mode="modal"
-              afterSignInUrl="/learn"
-              afterSignUpUrl="/learn"
-            >
-              <Button variant={"outline"}>Login</Button>
-            </SignInButton>
-          </SignedOut>
-        </ClerkLoaded>
+        <div className="flex flex-col items-center gap-y-3 max-w-[330px] w-full">
+          <ClerkLoading>
+            <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+          </ClerkLoading>
+          <ClerkLoaded>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton
+                mode="modal"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
+              >
+                <Button variant={"outline"}>Login</Button>
+              </SignInButton>
+            </SignedOut>
+          </ClerkLoaded>
+        </div>{" "}
       </div>
     </header>
   );
